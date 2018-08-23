@@ -40,6 +40,10 @@
   list
   add Esther Potato p/555555 e/esther@notreal.potato
   list
+  add David Lee p/123456 e/david@david.potato
+  list
+  add Sally Lee p/654321 e/sally@sally.potato
+  list
 
 ##########################################################
 # test find persons command

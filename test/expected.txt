@@ -171,6 +171,33 @@
 || 
 || 5 persons found!
 || ===================================================
+|| Enter command: || [Command entered:  add David Lee p/123456 e/david@david.potato]
+|| New person added: David Lee, Phone: 123456, Email: david@david.potato
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg
+|| 	4. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	5. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| 	6. David Lee  Phone Number: 123456  Email: david@david.potato
+|| 
+|| 6 persons found!
+|| ===================================================
+|| Enter command: || [Command entered:  add Sally Lee p/654321 e/sally@sally.potato]
+|| New person added: Sally Lee, Phone: 654321, Email: sally@sally.potato
+|| ===================================================
+|| Enter command: || [Command entered:  list]
+|| 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
+|| 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
+|| 	3. Charlie Dickson  Phone Number: 333333  Email: charlie.d@nus.edu.sg
+|| 	4. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	5. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| 	6. David Lee  Phone Number: 123456  Email: david@david.potato
+|| 	7. Sally Lee  Phone Number: 654321  Email: sally@sally.potato
+|| 
+|| 7 persons found!
+|| ===================================================
 || Enter command: || [Command entered:  find]
 || 
 || 0 persons found!
@@ -246,8 +273,10 @@
 || 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	3. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
 || 	4. Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
+|| 	5. David Lee  Phone Number: 123456  Email: david@david.potato
+|| 	6. Sally Lee  Phone Number: 654321  Email: sally@sally.potato
 || 
-|| 4 persons found!
+|| 6 persons found!
 || ===================================================
 || Enter command: || [Command entered:  delete 4]
 || Deleted Person: Esther Potato  Phone Number: 555555  Email: esther@notreal.potato
@@ -256,8 +285,10 @@
 || 	1. Adam Brown  Phone Number: 111111  Email: adam@gmail.com
 || 	2. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	3. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	4. David Lee  Phone Number: 123456  Email: david@david.potato
+|| 	5. Sally Lee  Phone Number: 654321  Email: sally@sally.potato
 || 
-|| 3 persons found!
+|| 5 persons found!
 || ===================================================
 || Enter command: || [Command entered:  delete 1]
 || Deleted Person: Adam Brown  Phone Number: 111111  Email: adam@gmail.com
@@ -265,8 +296,10 @@
 || Enter command: || [Command entered:  list]
 || 	1. Betsy Choo  Phone Number: 222222  Email: benchoo@nus.edu.sg
 || 	2. Dickson Ee  Phone Number: 444444  Email: dickson@nus.edu.sg
+|| 	3. David Lee  Phone Number: 123456  Email: david@david.potato
+|| 	4. Sally Lee  Phone Number: 654321  Email: sally@sally.potato
 || 
-|| 2 persons found!
+|| 4 persons found!
 || ===================================================
 || Enter command: || [Command entered:  clear]
 || Address book has been cleared!
