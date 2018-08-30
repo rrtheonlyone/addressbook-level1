@@ -425,11 +425,10 @@ public class AddressBook {
 
         // add the person as specified
         final HashMap<String, String> personToAdd = decodeResult.get();
-        final String check = personInBook(personToAdd);
 
         //check if person's name already in book
-        if (check != "") {
-            return String.format(MESSAGE_ERROR_DUPLICATE_ADD, check,
+        if (personInBook(personToAdd)) {
+            return String.format(MESSAGE_ERROR_DUPLICATE_ADD, personToAdd.get(PERSON_PROPERTY_NAME),
                     "Delete and re-add the name");
         }
 
@@ -837,16 +836,16 @@ public class AddressBook {
      * Checks if a person to add is already in the address book.
      *
      * @param personToAdd a person object that is to be added in
-     * @return an empty string "" if person not found or the person itself
+     * @return true if person in book or false otherwise
      */
-    private static String personInBook(HashMap<String, String> personToAdd) {
+    private static Boolean personInBook(HashMap<String, String> personToAdd) {
         for (HashMap<String, String> person : getAllPersonsInAddressBook()) {
             if (person.get(PERSON_PROPERTY_NAME).equals(personToAdd.get(PERSON_PROPERTY_NAME))) {
-                return person.get(PERSON_PROPERTY_NAME);
+                return true;
             }
         }
 
-        return "";
+        return false;
     }
 
 
