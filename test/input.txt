@@ -42,7 +42,9 @@
   list
   add David Lee p/123456 e/david@david.potato
   list
-  add Sally Lee p/654321 e/sally@sally.potato
+
+  # should catch adding same name again
+  add Charlie Dickson p/654321 e/sally@sally.potato
   list
 
 ##########################################################
