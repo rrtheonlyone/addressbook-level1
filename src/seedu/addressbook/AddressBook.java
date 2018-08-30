@@ -437,16 +437,6 @@ public class AddressBook {
         return getMessageForSuccessfulAddPerson(personToAdd);
     }
 
-    private static String personInBook(HashMap<String, String> personToAdd) {
-        for (HashMap<String, String> person : getAllPersonsInAddressBook()) {
-            if (person.get(PERSON_PROPERTY_NAME).equals(personToAdd.get(PERSON_PROPERTY_NAME))) {
-                return person.get(PERSON_PROPERTY_NAME);
-            }
-        }
-
-        return "";
-    }
-
     /**
      * Constructs a feedback message for a successful add person command execution.
      *
@@ -843,6 +833,22 @@ public class AddressBook {
         ALL_PERSONS.addAll(persons);
     }
 
+    /**
+     * Checks if a person to add is already in the address book.
+     *
+     * @param personToAdd a person object that is to be added in
+     * @return an empty string "" if person not found or the person itself
+     */
+    private static String personInBook(HashMap<String, String> personToAdd) {
+        for (HashMap<String, String> person : getAllPersonsInAddressBook()) {
+            if (person.get(PERSON_PROPERTY_NAME).equals(personToAdd.get(PERSON_PROPERTY_NAME))) {
+                return person.get(PERSON_PROPERTY_NAME);
+            }
+        }
+
+        return "";
+    }
+
 
     /*
      * ===========================================
@@ -1092,6 +1098,8 @@ public class AddressBook {
         return email.matches("\\S+@\\S+\\.\\S+"); // email is [non-whitespace]@[non-whitespace].[non-whitespace]
         //TODO: implement a more permissive validation
     }
+
+
 
 
     /*
