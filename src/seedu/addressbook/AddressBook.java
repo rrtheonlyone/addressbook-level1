@@ -83,6 +83,8 @@ public class AddressBook {
     private static final String MESSAGE_STORAGE_FILE_CREATED = "Created new empty storage file: %1$s";
     private static final String MESSAGE_WELCOME = "Welcome to your Address Book!";
     private static final String MESSAGE_USING_DEFAULT_FILE = "Using default storage file : " + DEFAULT_STORAGE_FILEPATH;
+    private static final String MESSAGE_ERROR_DUPLICATE_ADD
+            = "%1$s already exists in Address Book!" + LS + "%2$s";
 
     // These are the prefix strings to define the data type of a command parameter
     private static final String PERSON_DATA_PREFIX_PHONE = "p/";
@@ -423,8 +425,26 @@ public class AddressBook {
 
         // add the person as specified
         final HashMap<String, String> personToAdd = decodeResult.get();
+        final String check = personInBook(personToAdd);
+
+        //check if person's name already in book
+        if (check != "") {
+            return String.format(MESSAGE_ERROR_DUPLICATE_ADD, check,
+                    "Delete and re-add the name");
+        }
+
         addPersonToAddressBook(personToAdd);
         return getMessageForSuccessfulAddPerson(personToAdd);
+    }
+
+    private static String personInBook(HashMap<String, String> personToAdd) {
+        for (HashMap<String, String> person : getAllPersonsInAddressBook()) {
+            if (person.get(PERSON_PROPERTY_NAME).equals(personToAdd.get(PERSON_PROPERTY_NAME))) {
+                return person.get(PERSON_PROPERTY_NAME);
+            }
+        }
+
+        return "";
     }
 
     /**
